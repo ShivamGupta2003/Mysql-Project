@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link href="/css/tailwind.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Edit Username for <%= user.username %></h2>
+        <form method="post" action="/users/<%= user.id%>?_method=DELETE" class="space-y-4">
+            
+            <div class="flex flex-col">
+                <label for="password" class="mb-2 text-sm text-gray-600">Enter Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" 
+                       class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+            </div>
+            
+            <button class="w-full bg-red-500 text-white py-2 rounded-lg font-semibold hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                Delete User
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>

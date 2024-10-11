@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Users</title>
+
+    <link href="/tailwind.css" rel="stylesheet"> <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+    <!-- Heading for total users -->
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">
+        Total Users: <%= counts %>
+    </h1>
+
+    <!-- Buttons container -->
+    <div class="space-y-4">
+        <!-- Join Today button -->
+        <form action="/users/new">
+            <button
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow focus:outline-none focus:shadow-outline">
+                Join Today
+            </button>
+        </form>
+
+        <!-- All Users button -->
+        <form action="/users">
+            <button
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow focus:outline-none focus:shadow-outline">
+                All Users
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link href="/tailwind.css" rel="stylesheet"> <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">
+            Edit Username for <%= user.username %>
+        </h2>
+
+        <form method="post" action="/users/<%= user.id %>?_method=PATCH">
+            <!-- Username Textarea -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2" for="username">
+                    Username
+                </label>
+                <textarea name="username" id="username"
+                    class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                    rows="2"><%= user.username %></textarea>
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2" for="password">
+                    Password
+                </label>
+                <input type="password" name="password" id="password" placeholder="Enter password"
+                    class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Edit
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
