@@ -1,5 +1,5 @@
 
-  create table user (
+ CREATE TABLE IF NOT EXISTS user (
       id varchar(50) primary key ,
       username varchar(50) unique ,
       email varchar(50) unique not null ,
