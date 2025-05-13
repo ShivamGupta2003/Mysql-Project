@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: 16004,
-  ssl: { rejectUnauthorized: true },
+  ssl: { rejectUnauthorized: false },
 });
 
 let getRandomUser = () => {
